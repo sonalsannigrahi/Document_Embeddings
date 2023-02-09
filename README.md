@@ -1,4 +1,4 @@
-# Document_Embeddings
+# An Empirical Setup of Multilingual Document Embeddings
 
 In this repository, we provide code for the paper "Are the Best Multilingual Document Embeddings simply Based on Sentence Embeddings?" by Sonal Sannigrahi, Josef van Genabith, Cristina Espana-Bonet in EACL 2023.
 
@@ -29,11 +29,11 @@ Due to copyright reasons, we are not able to release datasets. Follow the instru
 ### CANTEMIST/ICD Code
 
 1. Run prepare_embs.py to prepare the embeddings 
-2. Next, run sentence_classif.py which outputs the accuracy matrix as well (simialr to MLDoc)
+2. Next, run sentence_classif.py which outputs the accuracy matrix as well (similar to MLDoc)
 
 
 ### WMT2016- Bilingual Doc-Alignment 
 
 1. First, get data from the WMT Task 
 2. Run doc_align.py to process the data 
-3. 
+3. Evaluate with WMT-16 code
