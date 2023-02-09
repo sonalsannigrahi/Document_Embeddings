@@ -7,12 +7,12 @@ In this repository, we provide code for the paper "Are the Best Multilingual Doc
 The following instructions assume that conda is already installed on your system.
 
 1. Clone this repository, guarding the same directories.
-2. Run <p> conda env create -f environment.yml </p>
-3. Activate the environment <p> conda activate doc-emb </p>
+2. Run `conda env create -f environment.yml`
+3. Activate the environment `conda activate doc-emb`
 
 ## Data Collection 
 
-Due to copyright reasons, we are not able to release datasets. Follow the instructions for the <p> WMT2016 Bilingual Document Alignment Task </p>, <p> MLDoc (Schwenk and Li, 2018) </p>, and <p> ICD Code Classification </p>
+Due to copyright reasons, we are not able to release datasets. Follow the instructions for the `WMT2016 Bilingual Document Alignment Task`, ` MLDoc (Schwenk and Li, 2018)`, and `ICD Code Classification`
 
 ## Run Experiments 
 
