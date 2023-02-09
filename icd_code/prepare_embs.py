@@ -21,13 +21,6 @@ labse = SentenceTransformer('sentence-transformers/LaBSE')
 
 datadir = './data/CANTEMIST2020/cantemist/dev-set1/cantemist-coding/txt/'
 doc_embs = './doc_embs/'
-doc_ids = []
-#i=0
-#for file in os.listdir(datadir):
-#    doc_ids.append(i)
-#    i += 1
-
-doc_ids = [0]
 
 def add_documents():
     i = 0
@@ -40,7 +33,6 @@ def generate_doc_vectors(embed_type):
     i = 0
     for filename in os.listdir(datadir):
         print(filename)
-        doc_embeddings.doc_ids = [0]
         doc_embeddings.docs[i] = [line for line in open( datadir + filename).readlines()]
         if embed_type=="laser":
             doc_embeddings.docs[i] = [[7]*128]*len(doc_embeddings.docs[i])
