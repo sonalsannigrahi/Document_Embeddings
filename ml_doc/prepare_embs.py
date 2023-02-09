@@ -23,11 +23,11 @@ def generate_doc_vectors(embs):
     for filename in os.listdir(embeddings):
         doc_embeddings.docs[i] = [line for line in open( datadir + filename).readlines()]
         if embed_type=="laser":
-            doc_embeddings.docs[i] = laser.encode(doc_embeddings.docs[i])
+            doc_embeddings.docs[i] = ENCODED_DATA
         if embed_type=="sbert":
-            doc_embeddings.docs[i] = sbert.encode(doc_embeddings.docs[i])
+            doc_embeddings.docs[i] = ENCODED_DATA
         if embed_type=="labse":
-            doc_embeddings.docs[i] = labse.encode(doc_embeddings.docs[i])
+            doc_embeddings.docs[i] = ENCODED_DATA
         doc_embeddings.run_all(i)
         for emb_type in ['full','top','bottom', 'tf_idf_2_4', 'tf_idf_4_4', 'pert', 'tf_pert', 'attn_pert']:
             doc_dir = doc_embs

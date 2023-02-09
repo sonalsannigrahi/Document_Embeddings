@@ -16,5 +16,24 @@ Due to copyright reasons, we are not able to release datasets. Follow the instru
 
 ## Run Experiments 
 
-1. Change directories to the task considered, and run `prepare_embs.py` in each (alternatively, run `run_all.sh` to run for all tasks)
-2. 
+1. Change directories to the task considered, and run `prepare_embs.py` in each directory
+2. In case there are library issues, install via pip any missing libraries/modules on your end
+
+### ML-Doc
+
+1. Follow instructions are < link > to process MLDoc Data
+2. Once ready, load the LASER Encoders and store data in designated directories 
+3. Set directories in the file compute_embs.py
+4. Once ready, run sent_classif.py to run the 2 layer MLP classifier. 
+
+### CANTEMIST/ICD Code
+
+1. Run prepare_embs.py to prepare the embeddings 
+2. Next, run sentence_classif.py which outputs the accuracy matrix as well (simialr to MLDoc)
+
+
+### WMT2016- Bilingual Doc-Alignment 
+
+1. First, get data from the WMT Task 
+2. Run doc_align.py to process the data 
+3. 

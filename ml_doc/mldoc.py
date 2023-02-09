@@ -90,3 +90,4 @@ for part in ('train1000', 'dev', 'test'):
         JoinEmbed(cfname + '.split.enc.' + lang,
                   cfname + '.sid.' + lang,
                   cfname + '.enc.' + lang)
+        
