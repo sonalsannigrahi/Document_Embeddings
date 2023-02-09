@@ -1,0 +1,12 @@
+name: doc-emb
+channels:
+  - pytorch
+dependencies:
+  - pytorch=1.8.1
+  - torchvision
+  - torchaudio
+  - python=3.8
+  - pip
+  - tqdm
+  - numpy
+  - matplotlib==3.3.3
