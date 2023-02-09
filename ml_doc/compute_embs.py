@@ -5,7 +5,7 @@
 import os
 import sys
 import argparse
-from ../process import *
+from process import *
 
 
 doc_embs = './doc_embs/'
