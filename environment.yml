@@ -4,6 +4,9 @@ channels:
 dependencies:
   - pytorch=1.8.1
   - torchvision
+  - sentence_transformers
+  - laserembeddings
+  - mcerp
   - torchaudio
   - python=3.8
   - pip

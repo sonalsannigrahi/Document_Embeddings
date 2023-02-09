@@ -16,4 +16,5 @@ Due to copyright reasons, we are not able to release datasets. Follow the instru
 
 ## Run Experiments 
 
-
+1. Change directories to the task considered, and run `prepare_embs.py` in each (alternatively, run `run_all.sh` to run for all tasks)
+2. 
