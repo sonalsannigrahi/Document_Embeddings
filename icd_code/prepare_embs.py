@@ -6,6 +6,13 @@ import os
 import sys
 import argparse
 from ../process import *
+from laserembeddings import Laser
+import math
+from sentence_transformers import SentenceTransformer
+
+sbert = SentenceTransformer('all-MiniLM-L6-v2')
+labse = SentenceTransformer('sentence-transformers/LaBSE')
+laser = Laser()
 
 
 ################################################
@@ -31,10 +38,9 @@ def generate_doc_vectors(embs='laser'):
         if embed_type=="laser":
             doc_embeddings.docs[i] = laser.embed_sentence(doc_embeddings.docs[i], lang=lang_id)
         if embed_type=="sbert";
-            doc_embeddings.docs[i] = sbert.embed_sentence(doc_embeddings.docs[i], lang=lang_id)
+            doc_embeddings.docs[i] = sbert.encode(doc_embeddings.docs[i])
         if embed_type=="labse":
-            model = SentenceTransformer('sentence-transformers/LaBSE')
-            doc_embeddings.docs[i] = model.encode(doc_embeddings.docs[i])
+            doc_embeddings.docs[i] = labse.encode(doc_embeddings.docs[i])
             
         doc_embeddings.docs[i]['text'] = filename #maintain same name in corpus
         doc_embeddings.run_all(i)

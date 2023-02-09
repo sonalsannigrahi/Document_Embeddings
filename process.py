@@ -1,12 +1,16 @@
 import numpy as np
 from mcerp import PERT  # pip install mcerp  # see https://github.com/tisimst/mcerp/blob/master/mcerp/__init__.py
 from laserembeddings import Laser
+from sentence_transformers import SentenceTransformer
+
 import math
 
 NUM_TIME_SLOTS = 16
 PERT_G = 20
 
 laser = Laser()
+sbert = SentenceTransformer('all-MiniLM-L6-v2')
+labse = SentenceTransformer('sentence-transformers/LaBSE')
 
 # PERT is very slow (50ms per distribution) so we cache a bank of PERT distributions
 _num_banks = 100
@@ -133,4 +137,5 @@ class Sentence_Configurations():
         self.tf_idf_w(document_id,4,4)
         self.tf_pert(document_id,2,4)
         self.tf_pert(document_id,4,4)
+        
         
