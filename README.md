@@ -21,7 +21,7 @@ Due to copyright reasons, we are not able to release datasets. Follow the instru
 
 ### ML-Doc
 
-1. Follow instructions are < link > to process MLDoc Data
+1. Follow instructions at <href> https://github.com/facebookresearch/MLDoc </href> to process MLDoc Data
 2. Once ready, load the LASER Encoders and store data in designated directories 
 3. Set directories in the file compute_embs.py
 4. Once ready, run sent_classif.py to run the 2 layer MLP classifier. 
